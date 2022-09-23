@@ -7,6 +7,10 @@ import Congrats from "./Congrats"
 
 Enzyme.configure({ adapter: new EnzymeAdapter() })
 
+type Props = {
+  success: Boolean
+}
+
 const setup = (props = {}) => {
   return shallow(<Congrats {...props} />)
 }
@@ -25,6 +29,6 @@ test('renders no text when `success`prop is false', () => {
 
 test('renders non-empty congrats message wehn `success` porp is true', () => {
   const wrapper = setup({ success: true })
-  const component = findByTestAttr(wrapper, "compponent-congrats")
-  expect(component.text().length).not.tobe(0)
+  const component = findByTestAttr(wrapper, "congrats-message")
+  expect(component.text().length).not.toBe(0)
 })
