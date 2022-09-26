@@ -4,7 +4,7 @@ import { findByTestAttr } from "../test/testUtils"
 import GuessedWords from "./GuessedWords"
 
 const defaultProps = {
-  GuessedWords: [
+  guessedWords: [
     { guessedWord: 'train', letterMatchCount: 3 }
   ]
 }

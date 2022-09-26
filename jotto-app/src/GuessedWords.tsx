@@ -6,12 +6,17 @@ type GuessedWord = {
 }
 
 type Props = {
-  GuessedWords: GuessedWord[]
+  guessedWords: GuessedWord[]
 }
 
-const GuessedWords = (porps: Props) => {
+const GuessedWords = (props: Props) => {
+  const { guessedWords } = props
   return (
-    <div>GuessedWords</div>
+    <div data-test="component-guessed-words">
+      {guessedWords?.length &&
+        <div data-test="guess-instructions">Try to guess the word</div>
+      }
+    </div>
   )
 }
 
