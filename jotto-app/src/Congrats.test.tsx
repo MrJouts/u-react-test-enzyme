@@ -8,10 +8,10 @@ type Props = {
   success: Boolean
 }
 
-const defualtProps: Props = { success: true }
+const defaultProps: Props = { success: true }
 
 const setup = (props = {}) => {
-  const setupProps = { ...defualtProps, ...props };
+  const setupProps = { ...defaultProps, ...props };
   return shallow(<Congrats {...setupProps} />)
 }
 
