@@ -18,7 +18,6 @@ const GuessedWords = ({ guessedWords }: Props) => {
       </span>
     )
   } else {
-
     const guessedWordsRows = guessedWords.map((word, index) => (
       <tr key={index} data-test="guessed-word">
         <td>{word.guessedWord}</td>
