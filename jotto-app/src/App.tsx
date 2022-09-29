@@ -1,15 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Congrats from './Congrats';
-import GuessedWords from './GuessedWords';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Congrats from "./Congrats";
+import GuessedWords from "./GuessedWords";
 
 function App() {
   return (
-    <div className="container">
+    <div data-test="component-app" className="container">
       <h1>Jotto</h1>
       <Congrats success={true} />
-      <GuessedWords guessedWords={[{ guessedWord: 'traing', letterMatchCount: 3 }]} />
+      <GuessedWords
+        guessedWords={[{ guessedWord: "traing", letterMatchCount: 3 }]}
+      />
     </div>
   );
 }
