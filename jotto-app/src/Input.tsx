@@ -2,9 +2,11 @@ import React from 'react'
 
 const Input = () => {
   const [currentGuess, setCurrentGuess] = React.useState("");
+
+
   return (
     <div data-test="component-input">
-      <form className="form-inline">
+      <form className="form-inline" data-test="form">
         <input
           data-test="input-box"
           className="mb-2 mx-sm-2"
@@ -16,6 +18,12 @@ const Input = () => {
         <button
           data-test="submit-button"
           className="btn btn-primary mb-2"
+          onClick={(e) => {
+            e.preventDefault()
+            // TODO: update guessedWords
+            // TODO: check againts secretWord and update success global state
+            setCurrentGuess("")
+          }}
         >
           Submit
         </button>
